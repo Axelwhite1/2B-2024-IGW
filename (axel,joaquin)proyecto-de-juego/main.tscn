@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://dqh76kx0w31y5"]
+[gd_scene load_steps=10 format=4 uid="uid://dqh76kx0w31y5"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_75hr6"]
 [ext_resource type="PackedScene" uid="uid://b4bi81bu0jqvu" path="res://player.tscn" id="1_hvn2c"]
 [ext_resource type="PackedScene" uid="uid://c8uwtpu7qatw2" path="res://mob.tscn" id="2_huukk"]
+[ext_resource type="Texture2D" uid="uid://c2vepvj1bb0dl" path="res://art/background-of-green-grass-field-cartoon-drawing-free-vector.jpg" id="3_e6l0v"]
 [ext_resource type="PackedScene" uid="uid://ckm3kh5eoxeei" path="res://hud.tscn" id="4_tki2j"]
 [ext_resource type="AudioStream" uid="uid://cjkdveovvv5r8" path="res://art/gameover.wav" id="6_3sc2h"]
 
@@ -25,18 +26,21 @@ loop = true
 script = ExtResource("1_75hr6")
 mob_scene = ExtResource("2_huukk")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(490, 725)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -2.0
-offset_right = 486.0
-offset_bottom = 723.0
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(450, 730)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -1.0
+offset_right = 519.0
+offset_bottom = 719.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0455191, 0.398365, 0.405886, 1)
+size_flags_horizontal = 4
+texture = ExtResource("3_e6l0v")
 
 [node name="Player" parent="." instance=ExtResource("1_hvn2c")]
 
