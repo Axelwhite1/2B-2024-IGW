@@ -1,8 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckm3kh5eoxeei"]
+[gd_scene load_steps=11 format=3 uid="uid://ckm3kh5eoxeei"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_p20u3"]
 [ext_resource type="FontFile" uid="uid://d4li6nes0s4k1" path="res://fonts/wheaton-capitals/wheaton capitals.otf" id="3_4eenv"]
+[ext_resource type="Texture2D" uid="uid://dm0as15fo1so6" path="res://2206_w032_n003_499a_p1_499.jpg" id="3_4olau"]
+[ext_resource type="Texture2D" uid="uid://cwqlalxk6d3r4" path="res://14025566.png" id="4_yf2bn"]
 [ext_resource type="FontFile" uid="uid://1a8f2ewso7qe" path="res://fonts/good-timing/good timing bd.otf" id="4_ymh4g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrs2y"]
+bg_color = Color(0.458912, 0.398434, 0.253345, 0.141176)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjrfv"]
+texture = ExtResource("3_4olau")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xepqw"]
+texture = ExtResource("3_4olau")
 
 [sub_resource type="InputEventAction" id="InputEventAction_nid4r"]
 action = &"start_game"
@@ -16,12 +27,14 @@ script = ExtResource("1_p20u3")
 [node name="ScoreLabel" type="Label" parent="."]
 anchors_preset = 10
 anchor_right = 1.0
+offset_right = 2.0
 offset_bottom = 78.0
 grow_horizontal = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0.0823529, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_4eenv")
 theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_rrs2y")
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -39,9 +52,10 @@ offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.92549, 0.207843, 0.192157, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_4eenv")
 theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_gjrfv")
 text = "Dodge the animals
 "
 horizontal_alignment = 1
@@ -55,15 +69,16 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -100.0
-offset_top = -140.0
-offset_right = 100.0
+offset_top = -176.0
+offset_right = 46.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("4_ymh4g")
 theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_xepqw")
 shortcut = SubResource("Shortcut_fkfwi")
-text = "Start"
+icon = ExtResource("4_yf2bn")
 
 [node name="MessageTimer" type="Timer" parent="."]
 wait_time = 2.0
