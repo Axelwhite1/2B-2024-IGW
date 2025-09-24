@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8uwtpu7qatw2"]
+[gd_scene load_steps=9 format=3 uid="uid://c8uwtpu7qatw2"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_j2474"]
 [ext_resource type="Texture2D" uid="uid://dqife0vhny51a" path="res://art/enemyFlyingAlt_2.png" id="3_4r1qx"]
-[ext_resource type="Texture2D" uid="uid://syce3n601jci" path="res://art/crocodile.png" id="3_irxat"]
 [ext_resource type="Texture2D" uid="uid://bbl52ehksptre" path="res://art/enemyFlyingAlt_1 (3.ª copia).png" id="3_xbsgr"]
+[ext_resource type="Texture2D" uid="uid://d4m10dyxde3l2" path="res://art/enemySwimming_1 (copia).png" id="4_8w2g6"]
 [ext_resource type="Texture2D" uid="uid://c1kum1g6s1g7h" path="res://art/dog.png" id="4_dtg85"]
+[ext_resource type="Texture2D" uid="uid://mfwt8kwnkwjr" path="res://art/enemySwimming_1 (otra copia).png" id="5_dsj2j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pbhoh"]
 animations = [{
@@ -21,7 +22,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_irxat")
+"texture": ExtResource("4_8w2g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dsj2j")
 }],
 "loop": true,
 "name": &"swim",
@@ -47,7 +51,7 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pbhoh")
-animation = &"swim"
+animation = &"fly"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
