@@ -46,7 +46,7 @@ func _on_mobtimer_timeout() -> void:
 	var direction = mob_spawn_location.rotation + PI / 4
 
 	# Add some randomness to the direction.
-	direction += randf_range(-PI / 6, PI / 3)
+	direction += randf_range(-PI / 6, PI / 2)
 	mob.rotation = direction
 
 	# Choose the velocity for the mob.
