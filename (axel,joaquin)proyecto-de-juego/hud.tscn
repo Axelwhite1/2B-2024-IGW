@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://ckm3kh5eoxeei"]
+[gd_scene load_steps=11 format=3 uid="uid://ckm3kh5eoxeei"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_p20u3"]
 [ext_resource type="FontFile" uid="uid://d4li6nes0s4k1" path="res://fonts/wheaton-capitals/wheaton capitals.otf" id="3_4eenv"]
-[ext_resource type="Texture2D" uid="uid://dm0as15fo1so6" path="res://2206_w032_n003_499a_p1_499.jpg" id="3_4olau"]
 [ext_resource type="Texture2D" uid="uid://d4cbcli2uh2m4" path="res://2206_w032_n003_499a_p1_499 (copia).jpg" id="3_j7qjt"]
 [ext_resource type="Texture2D" uid="uid://cwqlalxk6d3r4" path="res://14025566.png" id="4_yf2bn"]
 [ext_resource type="FontFile" uid="uid://1a8f2ewso7qe" path="res://fonts/good-timing/good timing bd.otf" id="4_ymh4g"]
@@ -14,7 +13,7 @@ bg_color = Color(0.458912, 0.398434, 0.253345, 0.141176)
 texture = ExtResource("3_j7qjt")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xepqw"]
-texture = ExtResource("3_4olau")
+texture = ExtResource("3_j7qjt")
 
 [sub_resource type="InputEventAction" id="InputEventAction_nid4r"]
 action = &"start_game"
@@ -69,9 +68,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -97.0
 offset_top = -176.0
-offset_right = 46.0
+offset_right = 36.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
