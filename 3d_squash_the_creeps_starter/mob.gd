@@ -4,6 +4,7 @@ extends CharacterBody3D
 
 @export var max_speed= 18
 
+signal squashed
 
 func _physics_process(_delta):
 	move_and_slide()
@@ -27,7 +28,7 @@ func _on_visible_on_screen_notifier_3d_screen_exited() -> void:
 	queue_free()
 	
 	
-signal squashed
+
 	
 func squash():
 	squashed.emit()
